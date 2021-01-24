@@ -38,7 +38,15 @@ class Song
   end
 
   def self.alphabetical
-    @@all.sort {|song| song.name}
+    @@all.sort_by {|song| song.name}
+  end
+
+  def self.new_from_filename(name)
+
+  end
+
+  def self.create_from_file(file)
+
   end
 
   def self.destroy_all
