@@ -46,10 +46,12 @@ class Song
     song = self.new
     song.name = data[0]
     song.artist_name = data[1]
+    song
   end
 
   def self.create_from_file(file)
-
+    song = self.new_from_filename(file)
+    @@all << song
   end
 
   def self.destroy_all
